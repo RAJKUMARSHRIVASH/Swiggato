@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h1>Order Status</h1>
+    <p>Order ID: {{ order.id }}</p>
+    <p>Customer Name: {{ order.customer_name }}</p>
+    <p>Status: {{ order.status }}</p>
+
+    <form method="POST" action="{{ url_for('order_status', order_id=order.id) }}">
+        <label for="status">Update Status:</label>
+        <input type="text" id="status" name="status" required>
+        <input type="submit" value="Update Status">
+    </form>
+    {% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Menu</h1>
+    <button onclick="location.href='/menu'">Menu</button>
+    <button onclick="location.href='/new_order'">New Order</button>
+    <button onclick="location.href='/review_orders'">Review Orders</button>
+    <button onclick="location.href='/order_status'">Order Status</button>    
+    <button onclick="location.href='/add_dish'">Add Dish</button>
+    <button onclick="location.href='/edit_dish'">Edit Dish</button>
+    <button onclick="location.href='/base'">Base</button>
+    <button onclick="location.href='/order'">Order</button>
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+    
+</body>
+</html>
